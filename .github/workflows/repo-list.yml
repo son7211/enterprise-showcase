@@ -23,7 +23,7 @@ jobs:
         script: |
           var json = require('./repositories.json'); 
           console.log(json.filter(repo => {
-            return repo.org.name === 'octo-faq'
+            return repo.org.login === 'octo-faq'
           }))
           console.log(JSON.parse(json))
         
