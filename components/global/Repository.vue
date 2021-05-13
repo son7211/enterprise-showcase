@@ -18,7 +18,7 @@
         </v-chip>
       </v-chip-group>
     </v-card-text>
-    <v-card-actions :class="{ 'no-topic': repo.topics.length == 0 }">
+    <v-card-actions :class="{ 'no-topic': repo.topics && repo.topics.length == 0 }">
       <v-btn>
         <v-icon left>
           mdi-eye-outline
