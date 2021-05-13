@@ -22,6 +22,7 @@ jobs:
       with: 
         script: |
           var json = require('./repositories.json'); 
+          console.log(json)
           console.log(JSON.parse(json))
         
     - name: Save the repos
