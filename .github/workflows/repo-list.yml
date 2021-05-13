@@ -11,21 +11,24 @@ jobs:
  
     steps:
     - uses: actions/checkout@v2
-    - name: Get the repos
-      uses: helaili/ea-repo-list@master
-      with:
-        enterprise: andrekolodochka
-        outputFilename: repositories.json
-        token: ${{secrets.GH_EA_TOKEN}}
-    - name: filter for org
+    - name: get repos
       uses: actions/github-script@v4
       with: 
+        github-token: ${{secrets.GH_EA_TOKEN}}
         script: |
-          var json = require('./repositories.json'); 
-          console.log(json.filter(repo => {
-            return repo.org.login === 'octo-faq'
-          }))
-          console.log(JSON.parse(json))
+          let repoResult = []
+          await github.paginate(octokit.repos.listForOrg, {
+            org: "octo-faq", 
+          }).then(repos => {
+            for(let repo of repos) {
+              let {name, full_name, description, html_url, language, stargazers_count, watchers_count, forks_count, topics} = repo
+              repoResult.push({name, full_name, description, html_url, language, stargazers_count, watchers_count, forks_count, topics, org})
+            }
+          }).catch(error => {
+            core.error(`${org.login} - ${error}`)
+          })
+          console.log(repoResult)
+          fs.writeFileSync('repositories.json', JSON.stringify(repoResult))
         
     - name: Save the repos
       run: |
