@@ -14,7 +14,7 @@ jobs:
     - name: Get the repos
       uses: helaili/ea-repo-list@master
       with:
-        enterprise: octodemo
+        enterprise: andrekolodochka
         outputFilename: repositories.json
         token: ${{secrets.GH_EA_TOKEN}}
     - name: filter for org
