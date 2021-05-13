@@ -17,7 +17,7 @@ jobs:
         github-token: ${{secrets.GH_EA_TOKEN}}
         script: |
           let repoResult = []
-          await github.paginate(octokit.repos.listForOrg, {
+          await github.paginate(github.repos.listForOrg, {
             org: "octo-faq", 
           }).then(repos => {
             for(let repo of repos) {
