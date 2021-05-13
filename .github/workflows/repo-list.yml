@@ -21,8 +21,8 @@ jobs:
           await github.paginate(github.repos.listForOrg, {
             org: "octo-faq", 
           }).then(repos => {
+            console.log(repos)
             for(let repo of repos) {
-               console.log(repo)
               let {name, full_name, description, html_url, language, stargazers_count, watchers_count, forks_count, topics} = repo
               repoResult.push({name, full_name, description, html_url, language, stargazers_count, watchers_count, forks_count, topics})
             }
