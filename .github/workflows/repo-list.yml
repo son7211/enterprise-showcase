@@ -17,6 +17,13 @@ jobs:
         enterprise: octodemo
         outputFilename: repositories.json
         token: ${{secrets.GH_EA_TOKEN}}
+    - name: filter for org
+      uses: actions/github-script@v4
+      with: 
+        script: |
+          var json = require('./repositories.json'); 
+          console.log(JSON.parse(json))
+        
     - name: Save the repos
       run: |
           git config user.name github-actions
