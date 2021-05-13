@@ -22,7 +22,9 @@ jobs:
       with: 
         script: |
           var json = require('./repositories.json'); 
-          console.log(json)
+          console.log(json.filter(repo => {
+            return repo.org.name === 'octo-faq'
+          }))
           console.log(JSON.parse(json))
         
     - name: Save the repos
