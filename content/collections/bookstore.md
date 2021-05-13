@@ -1,16 +1,10 @@
 ---
-title: Bookstore FTW!
-description: Learning about how to create a nice collection of projects
+title: GitHub Advanced Security
+description: Secure your software with GitHub Advanced Security 👀
 repositories:
-- aaa-table-of-contents/TOC
-- actions-clubhouse/checkout
-- brent-and-sebass-funtime/hi-sebass
-- constructocats/interconstruct
-- dchomh-demo/bookstore-demo
-- dchomh-demo/helloworld-node
-- deans-demos/azure_pipelines
+- octo-faq/advanced-security-terraform
+- octo-faq/code-scanning-javascript-demo
 ---
 
-# We :heart: books
-Everything about the bookstore app! 
-
+# GitHub Advanced Security
+Secure your software with GitHub Advanced Security 👀
