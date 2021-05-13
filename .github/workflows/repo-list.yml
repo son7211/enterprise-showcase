@@ -22,10 +22,8 @@ jobs:
           }).then(repos => {
             for(let repo of repos) {
               let {name, full_name, description, html_url, language, stargazers_count, watchers_count, forks_count, topics} = repo
-              repoResult.push({name, full_name, description, html_url, language, stargazers_count, watchers_count, forks_count, topics, org})
+              repoResult.push({name, full_name, description, html_url, language, stargazers_count, watchers_count, forks_count, topics})
             }
-          }).catch(error => {
-            core.error(`${org.login} - ${error}`)
           })
           console.log(repoResult)
           fs.writeFileSync('repositories.json', JSON.stringify(repoResult))
