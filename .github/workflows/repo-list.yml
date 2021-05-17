@@ -18,7 +18,7 @@ jobs:
         script: |
           const fs = require("fs")
           let repoResult = []
-          await github.paginate(github.repos.listForOrg, {
+          await github.paginate("GET /orgs/{org}/repos?type={type}", {
             org: "octo-faq", 
             type: "public",
           }).then(repos => {
