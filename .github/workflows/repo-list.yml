@@ -18,11 +18,11 @@ jobs:
         script: |
           const fs = require("fs")
           let repoResult = []
-          await github.paginate("GET /orgs/{org}/repos?type={type}", {
+          await github.paginate(github.repos.listForOrg, {
             org: "octo-faq", 
             type: "public",
             headers: {
-              "Accept": "application/vnd.github.mercy-preview+json"
+              "accept": "application/vnd.github.mercy-preview+json"
             }
           }).then(repos => {
             console.log(repos)
