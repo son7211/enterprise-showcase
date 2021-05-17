@@ -10,7 +10,7 @@
     </v-container>
     <v-container>
       <nuxt-content :document="collection" class="text-body-2" />
-      <collection :repositories="collection.repositories" />
+      <collection :repositories="collection.repositories" :topic="collection.topic" />
     </v-container>
   </article>
 </template>
@@ -19,7 +19,6 @@
 export default {
   async asyncData ({ $content, params }) {
     const collection = await $content('collections', params.slug).fetch()
-
     return { collection }
   },
   methods: {
