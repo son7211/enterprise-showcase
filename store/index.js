@@ -45,14 +45,14 @@ export const actions = {
     }
     const searchEngine = new Fuse(repositories, searchOptions)
     const map = {}
-    const topicMap = {};
+    const topicMap = {}
     for (const repo of repositories) {
       map[repo.full_name] = repo
       for (const topic of repo.topics) {
         if (!topicMap[topic]) {
-          topicMap[topic] = {};
+          topicMap[topic] = {}
         }
-        topicMap[topic][repo.full_name] = repo;
+        topicMap[topic][repo.full_name] = repo
       }
     }
 
@@ -73,7 +73,7 @@ export const getters = {
   getTopicMap: (state) => {
     return state.topicMap
   },
-  getTopicRepositories: (state) => (topic) => {
+  getTopicRepositories: state => (topic) => {
     return state.topicMap[topic]
   },
   getSearchEngine: (state) => {

@@ -12,28 +12,25 @@ export default {
     repositories: {
       type: Array,
       required: false,
-      default: []
+      default: () => []
     },
     topic: {
       type: String,
-      required: false
+      required: false,
+      default: () => null
     }
-  }, 
+  },
   computed: {
-    computedRepositories() {
-      let computed = [...this.repositories];
-      let topics = this.$store.getters.getTopicRepositories(this.topic);
-      
-      Object.keys(topics).forEach(key => {
-        if (computed[key]) return;
-        computed.push(key)
-      })
-      return [...new Set(computed)]
+    computedRepositories () {
+      const computed = [...this.repositories]
+      const topics = this.$store.getters.getTopicRepositories(this.topic) || {}
+
+      return [...new Set([...Object.keys(topics), ...computed])]
     },
     repositoryMap () {
       return this.$store.getters.getRepositoryMap
     }
-    
+
   },
   methods: {
     getRepository (repo) {
