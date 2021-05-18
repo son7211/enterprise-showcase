@@ -28,7 +28,7 @@ jobs:
             console.log(repos)
             for(let repo of repos) {
               let {name, full_name, description, html_url, language, stargazers_count, watchers_count, forks_count, topics} = repo
-              if (topics.includes("example-project") {
+              if (topics.includes("example-project")) {
                 repoResult.push({name, full_name, description, html_url, language, stargazers_count, watchers_count, forks_count, topics})
               }
             }
