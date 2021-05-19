@@ -85,7 +85,7 @@
       :absolute="!fixed"
       app
     >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <span><a href="https://github.com/octo-faq/enterprise-showcase">github.com/octo-faq/enterprise-showcase</a></span>
     </v-footer>
   </v-app>
 </template>
@@ -117,7 +117,7 @@ export default {
           to: '/resources'
         }
       ],
-      title: 'Enterprise Showcase',
+      title: 'Octo Showcase',
       descriptionLimit: 90,
       searchEntries: [],
       isLoading: false,
