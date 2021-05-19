@@ -24,7 +24,6 @@ export default {
     computedRepositories () {
       const computed = [...this.repositories]
       const topics = this.$store.getters.getTopicRepositories(this.topic) || {}
-
       return [...new Set([...Object.keys(topics), ...computed])]
     },
     repositoryMap () {

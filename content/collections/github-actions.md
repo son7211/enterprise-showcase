@@ -1,8 +1,7 @@
 ---
 title: GitHub Actions
 description: Automate everything with GitHub Actions 🎉
-repositories:
-- octo-faq/enterprise-showcase
+topic: github-actions
 ---
 
 <!-- # GitHub Actions automation
