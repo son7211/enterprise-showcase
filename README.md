@@ -13,7 +13,9 @@ Showcase all the great work that your peers are working on and happily sharing i
 
 
 ## Setup
-- Fork this repository
+- Fork the following repository (like we did for this project): https://github.com/helaili/enterprise-showcase
+<img width="329" alt="Screenshot 2021-05-19 at 10 47 05" src="https://user-images.githubusercontent.com/24505883/118783702-9a178980-b88f-11eb-9d57-a97af669c167.png">
+
 - Enable GitHub Pages by setting `gh-pages` as the source branch 
 ![Screen Shot 2021-01-11 at 16 16 46](https://user-images.githubusercontent.com/2787414/104200209-ad6da080-5428-11eb-8103-da14ee7d654d.png)
 - Create a `GH_EA_TOKEN` secret and provide a Personal Access Token with `read:org` and `read:enterprise` permissions as the value (see [helaili/ea-repo-list](https://github.com/helaili/ea-repo-list) for more details). 
