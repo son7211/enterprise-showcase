@@ -5,7 +5,7 @@
         <repository :repo="repo" />
       </v-col>
     </v-row>
-    <v-row align="start">
+    <v-row align="center">
       <v-col>
         <v-pagination v-model="page" :length="totalPages" @input="goToPage" />
       </v-col>

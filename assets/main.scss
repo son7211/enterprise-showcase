@@ -24,7 +24,7 @@
   font-weight: 500 !important;
   letter-spacing: -0.03em;
   margin-bottom: 24px;
-  
+
   @include start-at($medium) {
     font-size: 72px !important;
   }
@@ -49,4 +49,8 @@
 .plain-link {
   color: inherit !important; /* no blue color for links */
   text-decoration: inherit;  /* no underline */
+}
+
+.blockquote {
+  margin-left: 1em;
 }
