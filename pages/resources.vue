@@ -5,7 +5,7 @@
         src="GitHub-Mark-Light-120px-plus.png"
         alt="GitHub"
         class="mb-5"
-        style="margin-left:25px"
+        style="margin-left:0"
       >
       <blockquote class="blockquote">
         <h2 id="onboarding-faq">Onboarding FAQ</h2>
