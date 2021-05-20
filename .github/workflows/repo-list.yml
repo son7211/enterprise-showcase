@@ -2,8 +2,8 @@ name: Generate repository list
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron:  '0 * * * *' # Every hour
+  # schedule:
+   # - cron:  '0 * * * *' # Every hour
   
 jobs:
   repo-list:
