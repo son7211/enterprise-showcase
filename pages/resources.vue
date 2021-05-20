@@ -73,3 +73,7 @@
     </v-col>
   </v-row>
 </template>
+
+<style>
+  .blockquote {margin-left: 1em;}
+</style>
