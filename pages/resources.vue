@@ -1,5 +1,5 @@
 <template>
-  <v-row align="start">
+  <v-row align="start" justify="start">
     <v-col class="text-center">
       <img
         src="GitHub-Mark-Light-120px-plus.png"
