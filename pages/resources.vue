@@ -75,5 +75,5 @@
 </template>
 
 <style>
-  .blockquote {margin-left: 1em;}
+  .blockquote { margin-left: 0;}
 </style>
