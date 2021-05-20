@@ -7,7 +7,7 @@
         class="mb-5"
         style="margin-left:25px"
       >
-
+      <blockquote class="blockquote">
         <h2 id="onboarding-faq">Onboarding FAQ</h2>
             <ul>
             <li><p>I have multiple GitHub Enterprise Cloud Orgs, Can I combine these one billing entity? </p>
@@ -69,7 +69,7 @@
             <em>&mdash;The Zen of GitHub</em>
           </small>
         </footer>
-
+     </blockquote>
     </v-col>
   </v-row>
 </template>
