@@ -1,6 +1,12 @@
+<style scoped>
+ .text-center {
+  text-align : left
+ }
+</style>
+
 <template>
   <v-row>
-    <v-col class="text-center" justify="start">
+    <v-col class="text-center">
       <img
         src="GitHub-Mark-Light-120px-plus.png"
         alt="GitHub"
@@ -73,7 +79,3 @@
     </v-col>
   </v-row>
 </template>
-
-<style>
-  .text-center { margin-left: 0;}
-</style>
