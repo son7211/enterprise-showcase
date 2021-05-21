@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col class="text-center">
+    <v-col class="text-center" justify="start">
       <img
         src="GitHub-Mark-Light-120px-plus.png"
         alt="GitHub"
